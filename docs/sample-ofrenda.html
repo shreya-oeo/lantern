@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ofrenda - A collection of attempts to capture things that cannot be held.</title>
+<style>
+  :root { color-scheme: dark; --marigold: #f0a028; --bone: #f4e8d4; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 7vh 1.25rem 4rem; min-height: 100vh;
+    font: 17px/1.65 "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    color: var(--bone);
+    background: radial-gradient(120% 75% at 50% 0%, #241329 0%, #120a18 45%, #070509 100%);
+  }
+  main { max-width: 960px; margin: 0 auto; text-align: center; }
+  .rule { width: 90px; height: 2px; margin: 0 auto 2rem; background: var(--marigold); opacity: .7; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.9rem); font-weight: 400; margin: 0 0 .6rem; letter-spacing: .01em; }
+  .altar { color: #cbb6d8; font-style: italic; margin: 0 auto 3.5rem; max-width: 34rem; }
+  .shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+  .ghost {
+    padding: 2.4rem 1.1rem 1.5rem; border-radius: 10px;
+    border: 1px solid rgba(240, 160, 40, .22);
+    background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+  }
+  .candle { width: 12px; height: 34px; margin: 0 auto .9rem; border-radius: 3px 3px 1px 1px;
+             background: linear-gradient(180deg, #f6efdf, #cbb99a); position: relative; }
+  .flame {
+    position: absolute; left: 50%; bottom: 100%; width: 11px; height: 20px; margin-left: -5.5px;
+    border-radius: 50% 50% 45% 45% / 62% 62% 38% 38%;
+    background: radial-gradient(circle at 50% 72%, #fff4c4 0%, #ffb703 45%, #e8631a 78%, transparent 80%);
+    filter: drop-shadow(0 0 12px rgba(255, 150, 40, .85));
+    transform-origin: 50% 100%; animation: sway 2.6s ease-in-out infinite;
+  }
+  @keyframes sway {
+    0%, 100% { transform: rotate(-3deg) scaleY(1); opacity: .95; }
+    50%      { transform: rotate(3deg) scaleY(1.08); opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) { .flame { animation: none; } }
+  h2 { font-size: 1.05rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase;
+        color: var(--marigold); margin: 0 0 .7rem; }
+  .epitaph { margin: 0 0 1.1rem; }
+  .line { margin: 0; font-size: .86rem; color: #9c8ea8; font-style: italic; }
+  .line::before { content: "\201C"; } .line::after { content: "\201D"; }
+  footer { margin-top: 4rem; font-size: .78rem; color: #6f6379; letter-spacing: .04em; }
+</style>
+<main>
+  <div class="rule"></div>
+  <h1>Ofrenda</h1>
+  <p class="altar">A collection of attempts to capture things that cannot be held.</p>
+  <div class="shelf">
+    <section class="ghost">
+      <div class="candle"><span class="flame"></span></div>
+      <h2>the free Tuesday</h2>
+      <p class="epitaph">A four year list of possibilities that never found a calendar date.</p>
+      <p class="line">I have never once had a free Tuesday</p>
+    </section>
+    <section class="ghost">
+      <div class="candle"><span class="flame"></span></div>
+      <h2>the grease stain</h2>
+      <p class="epitaph">A thumbprint of fat obscuring the definition of enough.</p>
+      <p class="line">grease stain shaped like a thumb over the word &quot;enough</p>
+    </section>
+    <section class="ghost">
+      <div class="candle"><span class="flame"></span></div>
+      <h2>the wrong map</h2>
+      <p class="epitaph">A geography of memory where the data model failed the feeling.</p>
+      <p class="line">a map that is mostly wrong is honest</p>
+    </section>
+    <section class="ghost">
+      <div class="candle"><span class="flame"></span></div>
+      <h2>the fridge film</h2>
+      <p class="epitaph">Two rolls of silver and shadow, waiting for a light that never came.</p>
+      <p class="line">Two rolls still in the fridge</p>
+    </section>
+    <section class="ghost">
+      <div class="candle"><span class="flame"></span></div>
+      <h2>the taste of house</h2>
+      <p class="epitaph">A soup that mimics a building rather than a person.</p>
+      <p class="line">It tastes like the house, which is not the same as tasting like her</p>
+    </section>
+  </div>
+  <footer>456 words read &middot; gemma4:cloud &middot; this model is cloud-routed via Ollama</footer>
+</main>
+</html>
